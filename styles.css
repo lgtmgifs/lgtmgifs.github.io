@@ -1,0 +1,362 @@
+:root {
+  --bg: #f6f8fa;
+  --panel: #ffffff;
+  --sunken: #f0f2f5;
+  --border: #d0d7de;
+  --text: #1f2328;
+  --muted: #656d76;
+  --accent: #1f883d;
+  --accent-hi: #1a7f37;
+  --accent-text: #ffffff;
+  --danger: #cf222e;
+  --focus: #0969da;
+  /* System fonts only (GitHub's stacks): a dev's favourite installed mono first, if present. */
+  --mono: "JetBrains Mono", "Cascadia Code", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  --radius: 10px;
+  --chrome: 456px; /* measured: hero + output + actions + recent + pool + footer ≈ 450px */
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --sunken: #0b0f14;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #238636;
+    --accent-hi: #2ea043;
+    --danger: #f85149;
+    --focus: #4493f8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --sunken: #0b0f14;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #238636;
+  --accent-hi: #2ea043;
+  --danger: #f85149;
+  --focus: #4493f8;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.dim { color: var(--muted); }
+.small { font-size: 13px; }
+
+kbd {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: 0 5px;
+  font: 600 11px/1.7 var(--mono);
+  text-align: center;
+  color: inherit;
+  border: 1px solid currentColor;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  opacity: .7;
+}
+kbd + kbd { margin-left: 3px; }
+
+button {
+  font: 600 14px/1 var(--sans);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color .12s, border-color .12s, transform .06s;
+}
+button:hover:not(:disabled) { border-color: var(--muted); }
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: .45; cursor: not-allowed; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+button.ghost { background: transparent; border-color: transparent; padding: 8px 10px; }
+button.ghost:hover { border-color: var(--border); }
+button.link {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+button.link:hover { color: var(--text); }
+
+button.icon { color: var(--muted); padding: 7px; }
+button.icon:hover { color: var(--text); }
+button.icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* ---------- header ---------- */
+/* The buttons float in the hero's row instead of taking a row of their own. */
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 22px 16px 0;
+  pointer-events: none;
+}
+.top-actions { display: flex; gap: 4px; pointer-events: auto; }
+
+.hero { text-align: center; margin: 20px 0 20px; }
+.hero h1 {
+  margin: 0;
+  font: 700 clamp(26px, 6vw, 34px)/1.2 var(--mono);
+  letter-spacing: -0.02em;
+}
+
+/* ---------- main ---------- */
+.wrap {
+  flex: 1;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+}
+.lede { margin: 6px 0 0; color: var(--muted); }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.stage {
+  position: relative;
+  width: 100%; /* keep full width when max-height kicks in; the GIF letterboxes instead */
+  aspect-ratio: 4 / 3;
+  /* On short windows, shrink the stage so the whole page (footer included) fits on screen.
+     --chrome is the height of everything except the stage. */
+  max-height: max(200px, calc(100dvh - var(--chrome)));
+  display: grid;
+  place-items: center;
+  background: var(--sunken);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+/* Absolutely positioned so the GIF is sized by the stage box, not its own height;
+   with object-fit: contain the whole frame (captions included) is always visible. */
+.stage img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.stage.rolling img { animation: roll .22s ease-out; }
+@keyframes roll {
+  from { transform: translateY(-14%); filter: blur(6px); opacity: .2; }
+  to   { transform: none; filter: none; opacity: 1; }
+}
+.stage.loading::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: scan .8s linear infinite;
+}
+@keyframes scan { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+
+.empty { text-align: center; padding: 16px; }
+.empty p { margin: 4px 0; }
+.empty p:first-child { font-size: 18px; font-weight: 600; }
+
+.counter {
+  position: absolute;
+  top: 10px; right: 10px;
+  padding: 2px 8px;
+  font: 600 12px/1.6 var(--mono);
+  color: #fff;
+  background: rgb(0 0 0 / .55);
+  border-radius: 999px;
+}
+
+/* ---------- output bar ---------- */
+.output {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--mono);
+}
+.formats { display: flex; border-right: 1px solid var(--border); }
+.formats button {
+  font: 600 12px var(--mono);
+  padding: 0 12px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+}
+.formats button[aria-selected="true"] {
+  color: var(--text);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+.snippet {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  font: 13px/1.4 var(--mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--muted);
+  user-select: all;
+}
+.copy {
+  font: 600 12px var(--mono);
+  border: 0;
+  border-left: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0 16px;
+}
+
+/* ---------- actions ---------- */
+.actions { display: flex; gap: 8px; padding: 12px; }
+.actions .primary {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+.actions .primary:hover { background: var(--accent-hi); border-color: var(--accent-hi); }
+
+/* ---------- history ---------- */
+.history { margin-top: 20px; }
+.history h2, .pool-info {
+  margin: 0 0 8px;
+  font: 600 12px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+.history ol {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr)); /* one row; matches HISTORY_MAX in app.js */
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Every slot is the same square, filled or not, so the row height never changes. */
+.history li { aspect-ratio: 1; min-width: 0; }
+.history button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  background: var(--sunken);
+}
+.history button[aria-current="true"] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.history img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.history.is-empty { visibility: hidden; } /* keeps its space before the first flip */
+
+/* ---------- pool ---------- */
+.pool-info { margin: 20px 0 0; text-align: center; text-transform: none; }
+
+/* ---------- footer ---------- */
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  padding: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- help dialog ---------- */
+dialog {
+  font: inherit;
+  width: min(420px, calc(100vw - 32px));
+  padding: 20px;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+dialog::backdrop { background: rgb(0 0 0 / .45); }
+dialog h2 { margin: 0 0 12px; font-size: 16px; }
+dialog dl { display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; margin: 0 0 16px; align-items: center; }
+dialog dt { white-space: nowrap; }
+dialog dd { margin: 0; color: var(--muted); }
+dialog form { text-align: right; }
+dialog p { margin: 0 0 12px; }
+dialog a { color: var(--focus); }
+
+/* ---------- toast ---------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 16px);
+  max-width: calc(100vw - 32px);
+  padding: 8px 16px;
+  font: 600 13px var(--mono);
+  color: var(--accent-text);
+  background: var(--accent);
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s, transform .18s;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+.toast.warn { background: var(--danger); }
+
+/* Too narrow for the centred title and the buttons to share a row: stack them again. */
+@media (max-width: 640px) {
+  .top { position: static; padding-top: 8px; }
+  .hero { margin-top: 0; }
+  :root { --chrome: 504px; } /* the button row adds ~48px */
+}
+
+@media (max-width: 480px) {
+  .foot { display: none; }
+  .history ol { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .history li:nth-child(n + 6) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

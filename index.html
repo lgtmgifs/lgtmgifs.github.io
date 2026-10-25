@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LGTM GIFs Roulette</title>
+<meta name="description" content="One flip, one LGTM GIF, already on your clipboard. Approve the PR and move on.">
+<meta property="og:title" content="LGTM GIFs Roulette">
+<meta property="og:description" content="One flip, one LGTM GIF, already on your clipboard.">
+<meta name="theme-color" content="#0d1117">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎰</text></svg>">
+<link rel="stylesheet" href="styles.css">
+<script>
+  // Dark by default; apply a saved choice before first paint to avoid a light/dark flash.
+  try { const t = JSON.parse(localStorage.getItem("lgtm.theme")); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch {}
+</script>
+</head>
+<body>
+  <header class="top">
+    <nav class="top-actions">
+      <button class="ghost icon" id="aboutBtn" aria-label="About" title="About (I)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+      </button>
+      <button class="ghost icon" id="themeBtn" aria-label="Toggle theme" title="Toggle theme (T)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1><span aria-hidden="true">🎰</span> LGTM GIFs Roulette</h1>
+      <p class="lede">One flip. One GIF. Approve and move on.</p>
+    </div>
+
+    <section class="card">
+      <div class="stage" id="stage" aria-live="polite">
+        <div class="empty" id="empty">
+          <p>Press <kbd>Space</kbd> to flip</p>
+          <p class="dim small">the result is copied, so just paste it in the PR</p>
+        </div>
+        <span class="counter" id="counter" hidden></span>
+      </div>
+
+      <div class="output">
+        <div class="formats" role="tablist" aria-label="Copy format">
+          <button role="tab" data-format="md" title="Markdown (1)">md</button>
+          <button role="tab" data-format="html" title="HTML img tag (2)">html</button>
+          <button role="tab" data-format="url" title="Raw URL (3)">url</button>
+        </div>
+        <code class="snippet" id="snippet">…</code>
+        <button class="copy" id="copyBtn" disabled title="Copy (C)">copy</button>
+      </div>
+
+      <div class="actions">
+        <button class="primary" id="flipBtn">Flip</button>
+      </div>
+    </section>
+
+    <section class="history" id="historyWrap">
+      <h2>recent</h2>
+      <ol id="history"></ol>
+    </section>
+
+    <p class="pool-info">GIF Pool: <span id="poolInfo"></span></p>
+  </main>
+
+  <footer class="foot dim small">
+    <span><kbd>Space</kbd> flip</span>
+    <span><kbd>C</kbd> copy</span>
+    <span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> format</span>
+    <button class="link" id="helpBtn" type="button"><kbd>?</kbd> all shortcuts</button>
+  </footer>
+
+  <dialog id="about" aria-labelledby="aboutTitle">
+    <h2 id="aboutTitle">🎰 LGTM GIFs Roulette</h2>
+    <p>Approving PRs with a GIF is tradition. Scrolling for one isn't.</p>
+    <p>Flip. Paste. Ship. Don't like it? Flip again.</p>
+    <p class="dim small">Hand-picked approval GIFs, hosted by GIPHY, owned by their creators.</p>
+    <form method="dialog"><button>close <kbd>Esc</kbd></button></form>
+  </dialog>
+
+  <dialog id="help" aria-labelledby="helpTitle">
+    <h2 id="helpTitle">Keyboard shortcuts</h2>
+    <dl>
+      <dt><kbd>Space</kbd> <kbd>N</kbd></dt><dd>Flip: show a new GIF and copy it</dd>
+      <dt><kbd>C</kbd></dt><dd>Copy the current snippet again</dd>
+      <dt><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd></dt><dd>Format: Markdown / HTML / URL</dd>
+      <dt><kbd>T</kbd></dt><dd>Toggle light/dark</dd>
+      <dt><kbd>I</kbd></dt><dd>About this project</dd>
+      <dt><kbd>?</kbd></dt><dd>Show or hide this help</dd>
+    </dl>
+    <form method="dialog"><button>close <kbd>Esc</kbd></button></form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="gifs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
