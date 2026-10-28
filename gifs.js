@@ -101,4 +101,160 @@ window.SEED_GIFS = [
   "https://media.giphy.com/media/DfbpTbQ9TvSX6/giphy.gif",      // Minions mic drop
   "https://media.giphy.com/media/Onz7Kbh3TlY6GVHp2q/giphy.gif", // Parks and Rec mic drop
   "https://media.giphy.com/media/Z6DPKw6gyCYz4zEsxk/giphy.gif", // The Office mic drop
+  "https://media.giphy.com/media/7PwOZJLNYUkU/giphy.gif",       // Twin Peaks Dale Cooper thumbs up
+  "https://media.giphy.com/media/7TtvTUMm9mp20/giphy.gif",      // Arnold thumbs up
+  "https://media.giphy.com/media/b5ZNou8CKvBCg/giphy.gif",      // Swamp Thing thumbs up
+  "https://media.giphy.com/media/SWeJXPJPvluIZQSk5j/giphy.gif", // Pudgy Penguins looks good to me
+  "https://media.giphy.com/media/hpAMh2sBYpsmFhSRPI/giphy.gif", // Steve Buscemi looks fine to me
+  "https://media.giphy.com/media/1ZkMDj88mQ1rO/giphy.gif",      // Kramer OK
+  "https://media.giphy.com/media/xUKrrEnN9I5lnrcSMv/giphy.gif", // Thumbs OK
+  "https://media.giphy.com/media/3ohs81awFi25JV52AU/giphy.gif", // Conan looks good
+  "https://media.giphy.com/media/en87Ezpi6j0GLTNrgI/giphy.gif", // All good thumbs up
+  "https://media.giphy.com/media/TG3y3b2Ws0gRXgSHoP/giphy.gif", // Cat thumbs up
+  "https://media.giphy.com/media/CvZuv5m5cKl8c/giphy.gif",      // Deadwood thumbs up
+  "https://media.giphy.com/media/zBRPeDYQM8mGsnrt0Y/giphy.gif", // Anime do it, yes
+  "https://media.giphy.com/media/3Eq5lt9Tz832ugAkhk/giphy.gif", // Luigi well done
+  "https://media.giphy.com/media/3oEjI8vagntG7EDxgQ/giphy.gif", // Wayne's World thumbs up
+  "https://media.giphy.com/media/2K4V9yBmFjjKo/giphy.gif",      // Oscars thumbs up
+  "https://media.giphy.com/media/5tamwFxY7PTW0/giphy.gif",      // Yep thumbs up
+  "https://media.giphy.com/media/gmAZnZ6MneGE9htQoJ/giphy.gif", // Robot thumbs up approved
+  "https://media.giphy.com/media/GuDU8r5CnUoYtbS2CR/giphy.gif", // Cat nod, indeed
+  "https://media.giphy.com/media/1202FEj8qyNg3K/giphy.gif",     // Pokemon nod
+  "https://media.giphy.com/media/PudZiAbQDUEik/giphy.gif",      // Mr. Miyagi proud nod
+  "https://media.giphy.com/media/fuD4k3dvCpLaG8IsUH/giphy.gif", // Border collie nod
+  "https://media.giphy.com/media/Oo8Ly1JXZjrqm54qK4/giphy.gif", // Clint Eastwood nod
+  "https://media.giphy.com/media/XMBJ0l20sNWEM/giphy.gif",      // Yep nod
+  "https://media.giphy.com/media/B2RwHaB7pehJcQsVjK/giphy.gif", // Scooby-Doo nod
+  "https://media.giphy.com/media/zJ2IWtJXxYZiw/giphy.gif",      // Yes nod
+  "https://media.giphy.com/media/3kuSo744UIPJjcJUEn/giphy.gif", // Approved
+  "https://media.giphy.com/media/FbZYCW78PANyM/giphy.gif",      // Batman approves
+  "https://media.giphy.com/media/jmAkEI4puqqqSwNEEK/giphy.gif", // Seal of approval stamp
+  "https://media.giphy.com/media/GA1s4aZhfe5f2N3fFb/giphy.gif", // The Office ship it
+  "https://media.giphy.com/media/RpqSdirqOryI8/giphy.gif",      // FedEx ship it
+  "https://media.giphy.com/media/3og0IAQG2BtR13joe4/giphy.gif", // Push to deploy
+  "https://media.giphy.com/media/PApUm1HPVYlDNLoMmr/giphy.gif", // Deploy now
+  "https://media.giphy.com/media/njnaOsm1ORmakCSG6p/giphy.gif", // GitHub champagne
+  "https://media.giphy.com/media/9jhuQcF26JbzJ6I34a/giphy.gif", // Green light go
+  "https://media.giphy.com/media/8VrtCswiLDNnO/giphy.gif",      // The Office nailed it
+  "https://media.giphy.com/media/Q54fw7cxrs9BzCkzQv/giphy.gif", // Hammer, nailed it
+  "https://media.giphy.com/media/YnHrhXDadyaF6q1yBW/giphy.gif", // Great job, nailed it
+  "https://media.giphy.com/media/h0H7PL3l0EPovjbq0v/giphy.gif", // Home run yes
+  "https://media.giphy.com/media/VhWVAa7rUtT3xKX6Cd/giphy.gif", // Quality work
+  "https://media.giphy.com/media/ely3apij36BJhoZ234/giphy.gif", // Otter good job
+  "https://media.giphy.com/media/S9ztGXw9d3o0SO738Q/giphy.gif", // Hell yeah, good job
+  "https://media.giphy.com/media/JmCFfTlNy12wFpOK8Y/giphy.gif", // Seth Meyers yes
+  "https://media.giphy.com/media/2WH9DiLg2o1MYuKlEB/giphy.gif", // Chef's kiss
+  "https://media.giphy.com/media/3o7qDEq2bMbcbPRQ2c/giphy.gif", // Obama mic drop
+  "https://media.giphy.com/media/fC9gAyO6rnnAMWrJKa/giphy.gif", // Cookie Monster mic drop
+  "https://media.giphy.com/media/d0NnEG1WnnXqg/giphy.gif",      // Prince Harry mic drop
+  "https://media.giphy.com/media/WKdPOVCG5LPaM/giphy.gif",      // Amy Poehler high five
+  "https://media.giphy.com/media/39hsA5NQKeaFXNgMav/giphy.gif", // Tom Cruise high five
+  "https://media.giphy.com/media/QN6NnhbgfOpoI/giphy.gif",      // Barney Stinson high five
+  "https://media.giphy.com/media/sfxlOSTXORjOobH2QG/giphy.gif", // The Office high five
+  "https://media.giphy.com/media/XBlwFU4OJ0cgZVbNUl/giphy.gif", // High five, good job
+  "https://media.giphy.com/media/577HYoLf5Vu0w/giphy.gif",      // Stephen Colbert slow clap
+  "https://media.giphy.com/media/S6qkS0ETvel6EZat45/giphy.gif", // Friends good job
+  "https://media.giphy.com/media/iP3GyAWP9NrlpI0Ilt/giphy.gif", // The Office slow clap
+  "https://media.giphy.com/media/GV3h6gd47LWrmpS9sz/giphy.gif", // Harry Potter applause
+  "https://media.giphy.com/media/qIXVd1RoKGqlO/giphy.gif",      // Standing ovation
+  "https://media.giphy.com/media/xT9IggNqiMBqSAjrYA/giphy.gif", // Emmys applause
+  "https://media.giphy.com/media/WUmwGKySIjs8L7oYn9/giphy.gif", // McConaughey applause
+  "https://media.giphy.com/media/nlWGe7Q64zwQ0/giphy.gif",      // Darth Vader impressive
+  "https://media.giphy.com/media/iNg9XvTGBI83S/giphy.gif",      // Impressive
+  "https://media.giphy.com/media/LXiElF2dzvUmQ/giphy.gif",      // Well done clapping
+  "https://media.giphy.com/media/U2O50cAkpmTjG/giphy.gif",      // Sigourney Weaver perfect
+  "https://media.giphy.com/media/mbhseRYedlG5W/giphy.gif",      // Carl Sagan you are awesome
+  "https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif",      // Mr. Burns excellent
+  "https://media.giphy.com/media/kUFlw7XaGE36w/giphy.gif",      // Wayne's World excellent
+  "https://media.giphy.com/media/l46CDHTqbmnGZyxKo/giphy.gif",  // Bill and Ted excellent
+  "https://media.giphy.com/media/wqZkMIhfe0le8/giphy.gif",      // Jack Nicholson yes
+  "https://media.giphy.com/media/ytTYwIlbD1FBu/giphy.gif",      // DiCaprio bravo
+  "https://media.giphy.com/media/l2JJs57WKffxtMBFe/giphy.gif",  // Obama nod, not bad
+  "https://media.giphy.com/media/5pUHtgG70JjO9YHZPD/giphy.gif", // Brooklyn Nine-Nine not bad
+  "https://media.giphy.com/media/KxiRwO7tqXCTDVKobo/giphy.gif", // Brooklyn Nine-Nine noice
+  "https://media.giphy.com/media/l0HTYUmU67pLWv1a8/giphy.gif",  // Borat very nice
+  "https://media.giphy.com/media/UjCXeFnYcI2R2/giphy.gif",      // The Office fist bump
+  "https://media.giphy.com/media/15iyUkhyju1jy/giphy.gif",      // South Park fist bump
+  "https://media.giphy.com/media/VJfpiHSIQvIgNdZ8NP/giphy.gif", // Cat fist bump
+  "https://media.giphy.com/media/RrVzUOXldFe8M/giphy.gif",      // Nicolas Cage let's go
+  "https://media.giphy.com/media/nT7MlvIJRJ68ETf2GU/giphy.gif", // Stone Cold hell yeah
+  "https://media.giphy.com/media/6brH8dM3zeMyA/giphy.gif",      // Success kid win
+  "https://media.giphy.com/media/AgrfqPt5AyiTm/giphy.gif",      // Update success
+  "https://media.giphy.com/media/BlVnrxJgTGsUw/giphy.gif",      // Seinfeld happy dance
+  "https://media.giphy.com/media/yNQDyxlwKuovttE8W4/giphy.gif", // No bugs happy dance
+  "https://media.giphy.com/media/3knKct3fGqxhK/giphy.gif",      // Kung Fury hackerman
+  "https://media.giphy.com/media/26tPnAAJxXTvpLwJy/giphy.gif",  // Nerd hackerman
+  "https://media.giphy.com/media/1lk1IcVgqPLkA/giphy.gif",      // Captain America salute
+  "https://media.giphy.com/media/rHR8qP1mC5V3G/giphy.gif",      // Han Solo salute
+  "https://media.giphy.com/media/gKmwTEH4vyd2M/giphy.gif",      // Anna Kendrick you betcha
+  "https://media.giphy.com/media/OCgIaOgJheVItj7Afu/giphy.gif", // Ali G respect
+  "https://media.giphy.com/media/DfLwM9kttDFEQ/giphy.gif",      // DiCaprio Gatsby cheers
+  "https://media.giphy.com/media/XtUPfbJIltIaY/giphy.gif",      // Hangover congrats
+  "https://media.giphy.com/media/3ZP03VydSZCrEPHuQK/giphy.gif", // The Office agreed
+  "https://media.giphy.com/media/umxRbhpV3joNMeS4Xx/giphy.gif", // Cat handshake
+  "https://media.giphy.com/media/KE58LJF3k8jug/giphy.gif",      // Understood, I hear you
+  "https://media.giphy.com/media/kEaQSSUfgV1tMonAIZ/giphy.gif", // I approve this message
+  "https://media.giphy.com/media/m745dTCAxerHa/giphy.gif",      // Nerd yes
+  "https://media.giphy.com/media/xT9DPr4VjeCgeiLoMo/giphy.gif", // Star Wars 10-4 OK
+  "https://media.giphy.com/media/35pTQFiy14OeA/giphy.gif",      // Clint Eastwood legend
+  "https://media.giphy.com/media/RP25gTRQjX7bS1z0uo/giphy.gif", // John Cena legend
+  "https://media.giphy.com/media/cqrkbYO7Kl5Q6ghyJS/giphy.gif", // The Office brilliant
+  "https://media.giphy.com/media/jncb7lHMdHkmdBrUQ2/giphy.gif", // Harry Potter wow
+  "https://media.giphy.com/media/Go30VSSpSm0c8/giphy.gif",      // Kobe nod
+  "https://media.giphy.com/media/i79P9wUfnmPyo/giphy.gif",      // The Office yes
+  "https://media.giphy.com/media/55SfA4BxofRBe/giphy.gif",      // Michael Scott finger guns
+  "https://media.giphy.com/media/ynRrAHj5SWAu8RA002/giphy.gif", // Dwight yes
+  "https://media.giphy.com/media/YSDPo5stpFrQqZ54Ux/giphy.gif", // Dwight yes, approved
+  "https://media.giphy.com/media/1GlDW1HBD3q2A/giphy.gif",      // Jim high five
+  "https://media.giphy.com/media/KBfKueAjIJV8Q/giphy.gif",      // The Office finger guns
+  "https://media.giphy.com/media/3o6MbhZORlagRIyHKw/giphy.gif", // Homer happy
+  "https://media.giphy.com/media/xT5LMQ8rHYTDGFG07e/giphy.gif", // Homer excited
+  "https://media.giphy.com/media/NUwoRZzHc2Bws/giphy.gif",      // Keanu oh yeah
+  "https://media.giphy.com/media/3oz8xQQP4ahKiyuxHy/giphy.gif", // Sounds good
+  "https://media.giphy.com/media/9Vo3RrXKk9Z6mGzfyK/giphy.gif", // Eddie Murphy OK
+  "https://media.giphy.com/media/eXnLOTCiLID841VN4a/giphy.gif", // The Office sounds good
+  "https://media.giphy.com/media/tsgNNs93oIbwk/giphy.gif",      // Star Trek OK
+  "https://media.giphy.com/media/5hc2bkC60heU/giphy.gif",       // Jim Carrey OK
+  "https://media.giphy.com/media/YrI0hnj4jGpPa5LLHT/giphy.gif", // John Wayne agree
+  "https://media.giphy.com/media/jCtL0dhw2OuBD158zB/giphy.gif", // Sounds good, cool dog
+  "https://media.giphy.com/media/l41lRDJ2AmJOSzOgg/giphy.gif",  // Brooklyn Nine-Nine cool cool
+  "https://media.giphy.com/media/2HONNTJbRhzKE/giphy.gif",      // Community cool cool cool
+  "https://media.giphy.com/media/48FhEMYGWji8/giphy.gif",       // SpongeBob finger guns
+  "https://media.giphy.com/media/3otPoS81loriI9sO8o/giphy.gif", // Elf you did it
+  "https://media.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif", // Congratulations
+  "https://media.giphy.com/media/jJQC2puVZpTMO4vUs0/giphy.gif", // The Office excited
+  "https://media.giphy.com/media/5mTwWeN3MoS08/giphy.gif",      // Proud of you
+  "https://media.giphy.com/media/NEvPzZ8bd1V4Y/giphy.gif",      // Proud of you, yes
+  "https://media.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif", // Will Ferrell awesome
+  "https://media.giphy.com/media/90F8aUepslB84/giphy.gif",      // Parks and Rec awesome
+  "https://media.giphy.com/media/89x4osEodHEoo/giphy.gif",      // Napoleon Dynamite yes
+  "https://media.giphy.com/media/10Jpr9KSaXLchW/giphy.gif",     // Jack Nicholson yes nod
+  "https://media.giphy.com/media/DFNd1yVyRjmF2/giphy.gif",      // Jennifer Lawrence thumbs up
+  "https://media.giphy.com/media/MLCzwV4Jozc7Y9ntyh/giphy.gif", // Very good, agree
+  "https://media.giphy.com/media/l52CGyJ4LZPa0/giphy.gif",      // Adam Sandler head nod
+  "https://media.giphy.com/media/8U0skUhCXkQlDq6FnJ/giphy.gif", // The Office nod
+  "https://media.giphy.com/media/SHHrxXnGM1BuvuNj1t/giphy.gif", // The Office nod, agreed
+  "https://media.giphy.com/media/aCrRttmzK1jKo/giphy.gif",      // Big Bang Theory yes
+  "https://media.giphy.com/media/vinApXdZo4P72/giphy.gif",      // The Rock yes
+  "https://media.giphy.com/media/Cej9iRSxcIDUwBKwBP/giphy.gif", // Picard yes
+  "https://media.giphy.com/media/8YKstBTN4i68E/giphy.gif",      // Approve
+  "https://media.giphy.com/media/i7Mtc0aWPTZyo/giphy.gif",      // Oh yeah OK
+  "https://media.giphy.com/media/3o7rbJ70sEpdugB3BC/giphy.gif", // Thumbs up
+  "https://media.giphy.com/media/1tHzw9PZCB3gY/giphy.gif",      // Uh-huh yes
+  "https://media.giphy.com/media/FFYuwUiNlnU599cWwT/giphy.gif", // GitHub open source cheers
+  "https://media.giphy.com/media/Hc8PMCBjo9BXa/giphy.gif",      // Well done, laughing
+  "https://media.giphy.com/media/KL7I5MXrcvezC/giphy.gif",      // Drop the mic
+  "https://media.giphy.com/media/wrzf9P70YWLJK/giphy.gif",      // Best friends high five
+  "https://media.giphy.com/media/9uoYC7cjcU6w8/giphy.gif",      // Excited well done
+  "https://media.giphy.com/media/tODygE8KCqBzy/giphy.gif",      // Standing ovation
+  "https://media.giphy.com/media/BA3rnSaSxXtnryo8SF/giphy.gif", // Well done, good job
+  "https://media.giphy.com/media/Y7AMyV0Rsgq2VMduoC/giphy.gif", // Noice
+  "https://media.giphy.com/media/l3mZfxgPWhmuXa8Cc/giphy.gif",  // The Good Place happy
+  "https://media.giphy.com/media/OoTKFwKiOAbYc/giphy.gif",      // Aw yeah
+  "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif",  // The Office party hard
+  "https://media.giphy.com/media/Zw3oBUuOlDJ3W/giphy.gif",      // Shaun of the Dead cheers
+  "https://media.giphy.com/media/1lOveNsm9zIE298Xhg/giphy.gif", // Frasier yes
+  "https://media.giphy.com/media/JE6xHkcUPtYs0/giphy.gif",      // Yesss
+  "https://media.giphy.com/media/UDORIcubjYvIBAYTe1/giphy.gif", // Cat salute
+  "https://media.giphy.com/media/l46C93LNM33JJ1SMw/giphy.gif",  // Storks all good
 ];
